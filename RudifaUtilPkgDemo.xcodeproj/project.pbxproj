@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		9D2A97A324F5657500DA4D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2A97A224F5657500DA4D36 /* Assets.xcassets */; };
 		9D2A97A624F5657500DA4D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2A97A424F5657500DA4D36 /* LaunchScreen.storyboard */; };
 		9D2A97B124F5657500DA4D36 /* RudifaUtilPkgDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A97B024F5657500DA4D36 /* RudifaUtilPkgDemoTests.swift */; };
+		9D2A97BE24F5695500DA4D36 /* RudifaUtilPkg in Frameworks */ = {isa = PBXBuildFile; productRef = 9D2A97BD24F5695500DA4D36 /* RudifaUtilPkg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		9D2A97AC24F5657500DA4D36 /* RudifaUtilPkgDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RudifaUtilPkgDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2A97B024F5657500DA4D36 /* RudifaUtilPkgDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudifaUtilPkgDemoTests.swift; sourceTree = "<group>"; };
 		9D2A97B224F5657500DA4D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D2A97BB24F5679D00DA4D36 /* RudifaUtilPkg */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RudifaUtilPkg; path = ../RudifaUtilPkg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D2A97BE24F5695500DA4D36 /* RudifaUtilPkg in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +67,8 @@
 				9D2A979824F5657200DA4D36 /* RudifaUtilPkgDemo */,
 				9D2A97AF24F5657500DA4D36 /* RudifaUtilPkgDemoTests */,
 				9D2A979724F5657200DA4D36 /* Products */,
+				9D2A97BB24F5679D00DA4D36 /* RudifaUtilPkg */,
+				9D2A97BC24F5695500DA4D36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +104,13 @@
 			path = RudifaUtilPkgDemoTests;
 			sourceTree = "<group>";
 		};
+		9D2A97BC24F5695500DA4D36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,6 +127,9 @@
 			dependencies = (
 			);
 			name = RudifaUtilPkgDemo;
+			packageProductDependencies = (
+				9D2A97BD24F5695500DA4D36 /* RudifaUtilPkg */,
+			);
 			productName = RudifaUtilPkgDemo;
 			productReference = 9D2A979624F5657200DA4D36 /* RudifaUtilPkgDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -469,6 +484,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D2A97BD24F5695500DA4D36 /* RudifaUtilPkg */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RudifaUtilPkg;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D2A978E24F5657200DA4D36 /* Project object */;
 }
