@@ -6,6 +6,7 @@
 //  Copyright © 2020 Rudolf Farkas. All rights reserved.
 //
 
+import BarChartPkg
 import RudifaUtilPkg
 import UIKit
 
@@ -41,6 +42,18 @@ class ViewController: UIViewController {
         static var titles: [String]
     }
 
+    var priceLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.backgroundColor = .systemTeal // uncomment for visual debugging
+        label.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body) // .systemFont(ofSize: 18)
+        label.text = "Month"
+        label.textAlignment = .center
+        label.sizeToFit()
+        return label
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,8 +62,23 @@ class ViewController: UIViewController {
         demo_DebugUtil()
         demo_EnumUtil()
         demo_RegexUtil()
+        demo_RegexUtil_extractDouble()
         demo_StringUtil()
         demo_UserDefaultsExt()
+        demo_TwoYearInterval()
+
+        // RudifaUtilPkgDemo.updatePriceDisplayLabelText()
+
+        view.addSubview(priceLabel)
+
+        NSLayoutConstraint.activate([
+            priceLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            priceLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+            priceLabel.widthAnchor.constraint(equalToConstant: 200.0),
+            priceLabel.heightAnchor.constraint(equalToConstant: 30.0),
+        ])
+
+        updatePriceLabel(priceString: "19.95", currencyShort: "CHF/H")
     }
 
     func demo_CollectionUtil() {
@@ -111,10 +139,18 @@ class ViewController: UIViewController {
         printClassAndFunc(info: "str= \"\(str)\" pattern= \"\(pattern)\" matches= \(matches)")
     }
 
+    func demo_RegexUtil_extractDouble() {
+        let containsANumber = #"{\"USD\":57938.29}"#
+        let extracted = containsANumber.extractDouble()!
+        printClassAndFunc(info: "containsANumber= \(containsANumber) extracted= \(extracted)")
+    }
+
     func demo_StringUtil() {
         let str = "camelCaseSplit"
         printClassAndFunc(info: "str= \"\(str)\" str.camelCaseSplit= \"\(str.camelCaseSplit)\"")
     }
+
+
 
     struct UsingPropertyWrappers {
         @WholeMonth var yMonth: Date
@@ -132,5 +168,28 @@ class ViewController: UIViewController {
         printClassAndFunc(info: "userId= \(LocalCodableDefaults.userId)")
         printClassAndFunc(info: "subscriptionInfo= \(LocalCodableDefaults.subscriptionInfo)")
         printClassAndFunc(info: "titles= \(LocalCodableDefaults.titles)")
+    }
+}
+
+extension ViewController {
+    fileprivate func attributedString(_ priceString: String, _ currencyShort: String) -> NSAttributedString {
+        return NSAttributedString(stringsWithStyle: [(priceString, .title3), (currencyShort, .footnote)], separator: " ")
+    }
+
+    func updatePriceLabel(priceString: String, currencyShort: String) {
+        priceLabel.isHidden = (priceString == "0.00")
+        priceLabel.attributedText = attributedString(priceString, currencyShort)
+    }
+
+    func demo_TwoYearInterval() {
+        let date = Date()
+        do {
+            let intervalTwoYearsAroundToday = DateInterval.twoYearsAround(date: date)
+            printClassAndFunc(info: "intervalTwoYearsAroundToday= \(intervalTwoYearsAroundToday)")
+        }
+        do {
+            let intervalTwoYearsAroundToday = date.twoYearsAround
+            printClassAndFunc(info: "intervalTwoYearsAroundToday= \(intervalTwoYearsAroundToday)")
+        }
     }
 }
