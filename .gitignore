@@ -2,11 +2,13 @@
 *.xcuserstate
 *.xcbkptlist
 *xcuserdata
+*xcuserdatad
 *xcbaselines
 build/
 DerivedData/
 .xcodesamplecode.plist
 docs/
+*swiftpm/
 
 __pycache__/
 
