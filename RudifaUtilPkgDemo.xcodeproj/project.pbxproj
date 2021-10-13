@@ -41,7 +41,6 @@
 		9D2A97AC24F5657500DA4D36 /* RudifaUtilPkgDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RudifaUtilPkgDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2A97B024F5657500DA4D36 /* RudifaUtilPkgDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudifaUtilPkgDemoTests.swift; sourceTree = "<group>"; };
 		9D2A97B224F5657500DA4D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9DA8D64E253CEA7600F3BDD6 /* RudifaUtilPkg */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RudifaUtilPkg; path = ../RudifaUtilPkg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +66,6 @@
 		9D2A978D24F5657200DA4D36 = {
 			isa = PBXGroup;
 			children = (
-				9DA8D64E253CEA7600F3BDD6 /* RudifaUtilPkg */,
 				9D2A979824F5657200DA4D36 /* RudifaUtilPkgDemo */,
 				9DA8D623253C92DB00F3BDD6 /* Util */,
 				9D2A97AF24F5657500DA4D36 /* RudifaUtilPkgDemoTests */,
@@ -510,7 +508,7 @@
 			repositoryURL = "https://github.com/rudifa/RudifaUtilPkg.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.3;
+				minimumVersion = 1.0.0;
 			};
 		};
 		9D58008424FD1057006DD8BC /* XCRemoteSwiftPackageReference "BarChartPkg" */ = {

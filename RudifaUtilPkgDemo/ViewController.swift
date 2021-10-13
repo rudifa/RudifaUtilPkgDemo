@@ -118,17 +118,17 @@ class ViewController: UIViewController {
 
         var dir2 = Windrose.south
         let dir2orig = dir2
-        dir2.increment(next: true)
+        dir2.next(true)
         let dir2next = dir2
-        dir2.increment(next: false)
-        dir2.increment(next: false)
+        dir2.next(false)
+        dir2.next(false)
         let dir2prev = dir2
         printClassAndFunc(info: "dir2orig= \(dir2orig) dir2next= \(dir2next) dir2prev= \(dir2prev)")
 
-        var dir3 = Windrose.south
-        let dir3next = dir3.incremented(next: true)
-        let dir3orig = dir3.incremented(next: false)
-        let dir3prev = dir3.incremented(next: false)
+        let dir3 = Windrose.south
+        let dir3next = dir3.next
+        let dir3orig = dir3.prev
+        let dir3prev = dir3.prev
         printClassAndFunc(info: "dir3orig= \(dir3orig) dir3next= \(dir3next) dir3prev= \(dir3prev)")
     }
 
