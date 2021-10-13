@@ -16,6 +16,7 @@
 		9D2A97B124F5657500DA4D36 /* RudifaUtilPkgDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A97B024F5657500DA4D36 /* RudifaUtilPkgDemoTests.swift */; };
 		9D2A97C424F57ADF00DA4D36 /* RudifaUtilPkg in Frameworks */ = {isa = PBXBuildFile; productRef = 9D2A97C324F57ADF00DA4D36 /* RudifaUtilPkg */; };
 		9D58008624FD1057006DD8BC /* BarChartPkg in Frameworks */ = {isa = PBXBuildFile; productRef = 9D58008524FD1057006DD8BC /* BarChartPkg */; };
+		9D784D58271722A400BED66F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9D784D57271722A400BED66F /* README.md */; };
 		9DA8D63E253CCF7000F3BDD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2A97A424F5657500DA4D36 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		9D2A97AC24F5657500DA4D36 /* RudifaUtilPkgDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RudifaUtilPkgDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2A97B024F5657500DA4D36 /* RudifaUtilPkgDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudifaUtilPkgDemoTests.swift; sourceTree = "<group>"; };
 		9D2A97B224F5657500DA4D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D784D57271722A400BED66F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		9D2A978D24F5657200DA4D36 = {
 			isa = PBXGroup;
 			children = (
+				9D784D57271722A400BED66F /* README.md */,
 				9D2A979824F5657200DA4D36 /* RudifaUtilPkgDemo */,
 				9DA8D623253C92DB00F3BDD6 /* Util */,
 				9D2A97AF24F5657500DA4D36 /* RudifaUtilPkgDemoTests */,
@@ -211,6 +214,7 @@
 			files = (
 				9D2A97A624F5657500DA4D36 /* LaunchScreen.storyboard in Resources */,
 				9D2A97A324F5657500DA4D36 /* Assets.xcassets in Resources */,
+				9D784D58271722A400BED66F /* README.md in Resources */,
 				9D2A97A124F5657200DA4D36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
