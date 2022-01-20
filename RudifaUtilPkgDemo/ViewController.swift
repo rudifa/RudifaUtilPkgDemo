@@ -86,35 +86,36 @@ class ViewController: UIViewController {
             let arr1 = [5, 4, 3, 2, 1]
             let arr2 = [3, 4, 5, 6, 7]
             let updated = arr1.updatedPreservingOrder(from: arr2)
-            printClassAndFunc(info: "arr1= \(arr1) arr2= \(arr2) arr1.updatedPreservingOrder(from: arr2)= \(updated) ")
+            printClassAndFunc("arr1= \(arr1) arr2= \(arr2) arr1.updatedPreservingOrder(from: arr2)= \(updated) ")
         }
         do {
             let arr1 = ["5", "4", "3", "2", "1"]
             let arr2 = ["3", "4", "5", "6", "7"]
             let updated = arr1.updatedPreservingOrder(from: arr2)
-            printClassAndFunc(info: "arr1= \(arr1) arr2= \(arr2) arr1.updatedPreservingOrder(from: arr2)= \(updated) ")
+            printClassAndFunc("arr1= \(arr1) arr2= \(arr2) arr1.updatedPreservingOrder(from: arr2)= \(updated) ")
         }
     }
 
     func demo_DateUtil() {
-        printClassAndFunc(info: "ymDay= \(ymDay.ddMMyyyy_HHmmss)")
-        printClassAndFunc(info: "ymMonth= \(ymMonth.ddMMyyyy_HHmmss)")
+        printClassAndFunc("ymDay= \(ymDay.ddMMyyyy_HHmmss)")
+        printClassAndFunc("ymMonth= \(ymMonth.ddMMyyyy_HHmmss)")
     }
 
     func demo_DebugUtil() {
-        printClassAndFunc()
-        printClassAndFunc(info: "@")
-        printClassAndFunc(info: "@here and now")
+        printClassAndFunc("")
+        printClassAndFunc("@")
+        printClassAndFunc("@here and now")
         logClassAndFunc()
     }
 
+    @available(*, deprecated) // silence warnings
     func demo_EnumUtil() {
         enum Windrose: CaseIterable, Equatable {
             case north, east, south, west
         }
 
         let dir1 = Windrose.south
-        printClassAndFunc(info: "dir1= \(dir1) dir1.next= \(dir1.next) dir1.prev= \(dir1.prev)")
+        printClassAndFunc("dir1= \(dir1) dir1.next= \(dir1.next) dir1.prev= \(dir1.prev)")
 
         var dir2 = Windrose.south
         let dir2orig = dir2
@@ -123,31 +124,31 @@ class ViewController: UIViewController {
         dir2.next(false)
         dir2.next(false)
         let dir2prev = dir2
-        printClassAndFunc(info: "dir2orig= \(dir2orig) dir2next= \(dir2next) dir2prev= \(dir2prev)")
+        printClassAndFunc("dir2orig= \(dir2orig) dir2next= \(dir2next) dir2prev= \(dir2prev)")
 
         let dir3 = Windrose.south
         let dir3next = dir3.next
         let dir3orig = dir3.prev
         let dir3prev = dir3.prev
-        printClassAndFunc(info: "dir3orig= \(dir3orig) dir3next= \(dir3next) dir3prev= \(dir3prev)")
+        printClassAndFunc("dir3orig= \(dir3orig) dir3next= \(dir3next) dir3prev= \(dir3prev)")
     }
 
     func demo_RegexUtil() {
         let str = "abra cadabra"
         let pattern = "a."
         let matches = str.matches(for: pattern)
-        printClassAndFunc(info: "str= \"\(str)\" pattern= \"\(pattern)\" matches= \(matches)")
+        printClassAndFunc("str= \"\(str)\" pattern= \"\(pattern)\" matches= \(matches)")
     }
 
     func demo_RegexUtil_extractDouble() {
         let containsANumber = #"{\"USD\":57938.29}"#
         let extracted = containsANumber.extractDouble()!
-        printClassAndFunc(info: "containsANumber= \(containsANumber) extracted= \(extracted)")
+        printClassAndFunc("containsANumber= \(containsANumber) extracted= \(extracted)")
     }
 
     func demo_StringUtil() {
         let str = "camelCaseSplit"
-        printClassAndFunc(info: "str= \"\(str)\" str.camelCaseSplit= \"\(str.camelCaseSplit)\"")
+        printClassAndFunc("str= \"\(str)\" str.camelCaseSplit= \"\(str.camelCaseSplit)\"")
     }
 
 
@@ -165,9 +166,9 @@ class ViewController: UIViewController {
     }
 
     func demo_UserDefaultsExt() {
-        printClassAndFunc(info: "userId= \(LocalCodableDefaults.userId)")
-        printClassAndFunc(info: "subscriptionInfo= \(LocalCodableDefaults.subscriptionInfo)")
-        printClassAndFunc(info: "titles= \(LocalCodableDefaults.titles)")
+        printClassAndFunc("userId= \(LocalCodableDefaults.userId)")
+        printClassAndFunc("subscriptionInfo= \(LocalCodableDefaults.subscriptionInfo)")
+        printClassAndFunc("titles= \(LocalCodableDefaults.titles)")
     }
 }
 
@@ -185,11 +186,11 @@ extension ViewController {
         let date = Date()
         do {
             let intervalTwoYearsAroundToday = DateInterval.twoYearsAround(date: date)
-            printClassAndFunc(info: "intervalTwoYearsAroundToday= \(intervalTwoYearsAroundToday)")
+            printClassAndFunc("intervalTwoYearsAroundToday= \(intervalTwoYearsAroundToday)")
         }
         do {
             let intervalTwoYearsAroundToday = date.twoYearsAround
-            printClassAndFunc(info: "intervalTwoYearsAroundToday= \(intervalTwoYearsAroundToday)")
+            printClassAndFunc("intervalTwoYearsAroundToday= \(intervalTwoYearsAroundToday)")
         }
     }
 }
